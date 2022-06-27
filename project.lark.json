@@ -1,0 +1,14 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "fe-clite-hybrid",
+  "description": "顺丰同城飞书小程序",
+  "appid": "",
+  "libVersion": "1.9.1",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}
