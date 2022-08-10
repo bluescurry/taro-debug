@@ -1,10 +1,17 @@
 module.exports = {
   env: {
-    NODE_ENV: '"production"'
+    NODE_ENV: '"production"',
   },
-  defineConstants: {
+  defineConstants: {},
+  mini: {
+    webpackChain(chain) {
+      /**
+       * 如果小程序编译后体积过大，可以使用webpack-bundle-analyzer插件对打包体积进行分析。
+       * 启动命令：yarn run build-weapp [分包名]
+       */
+      // chain.plugin("analyzer").use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin, []);
+    },
   },
-  mini: {},
   h5: {
     /**
      * WebpackChain 插件配置
@@ -17,7 +24,6 @@ module.exports = {
     //    */
     //   chain.plugin('analyzer')
     //     .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, [])
-
     //   /**
     //    * 如果 h5 端首屏加载时间过长，可以使用 prerender-spa-plugin 插件预加载首页。
     //    * @docs https://github.com/chrisvfritz/prerender-spa-plugin
@@ -35,5 +41,5 @@ module.exports = {
     //       }))
     //   }
     // }
-  }
-}
+  },
+};

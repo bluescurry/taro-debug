@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Provider } from "react-redux";
 import Taro from "@tarojs/taro";
+import "windi.css";
 
 import configStore from "./store";
 

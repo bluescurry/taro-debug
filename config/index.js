@@ -9,7 +9,10 @@ const config = {
   },
   sourceRoot: "src",
   outputRoot: "dist",
-  plugins: ["@tarojs/plugin-platform-lark"],
+  plugins: [
+    "@tarojs/plugin-platform-lark",
+    ["@dcasia/mini-program-tailwind-webpack-plugin/dist/taro", { designWidth: 750 }],
+  ],
   defineConstants: {},
   copy: {
     patterns: [],
@@ -56,9 +59,9 @@ const config = {
   },
 };
 
-module.exports = function (merge) {
+export default function(merge) {
   if (process.env.NODE_ENV === "development") {
     return merge({}, config, require("./dev"));
   }
   return merge({}, config, require("./prod"));
-};
+}
