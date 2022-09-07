@@ -48,21 +48,41 @@ module.exports = defineConfig({
   // 样式类名黑名单，包含在里面的不会被 windicss 解析，可以用于过滤一些有问题的类名
   blocklist: ["!visible"],
   shortcuts: {
+    // #region flex 布局
     row: "flex flex-row",
+
+    "row-x-start": "row justify-start",
     "row-x-center": "row justify-center",
     "row-x-end": "row justify-end",
     "row-x-between": "row justify-between",
+    "row-x-around": "row justify-around",
+    "row-x-evenly": "row justify-evenly",
+
+    "row-y-start": "row items-start",
     "row-y-center": "row items-center",
     "row-y-end": "row items-end",
+    "row-y-baseline": "row items-baseline",
+    "row-y-stretch": "row items-stretch",
+
     "row-center": "row justify-center items-center",
-    "row-between-center": "row justify-between items-center",
 
     column: "flex flex-col",
-    "column-y-center": "column justify-center",
+
     "column-x-start": "column items-start",
     "column-x-center": "column items-center",
-    "column-start-center": "column justify-center items-start",
+    "column-x-end": "column items-end",
+    "column-x-baseline": "column items-baseline",
+    "column-x-stretch": "column items-stretch",
+
+    "column-y-start": "column justify-start",
+    "column-y-center": "column justify-center",
+    "column-y-end": "column justify-end",
+    "column-y-between": "column justify-between",
+    "column-y-around": "column justify-around",
+    "column-y-evenly": "column justify-evenly",
+
     "column-center": "column justify-center items-center",
+    // #endregion
   },
   theme: {
     extend: {
